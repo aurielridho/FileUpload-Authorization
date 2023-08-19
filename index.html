@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Unggah File</title>
+    <style>
+        .label-note {
+            color: red;
+            font-style: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulir Unggah File</h2>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
+        <br>
+        <label for="file">Pilih file (JPEG atau PNG):</label>
+        <input type="file" name="file" id="file" accept=".jpeg, .jpg, .png, .pdf" required>
+        <br>
+        <span class="label-note">Untuk upload PDF</span>
+        <br>
+        <span class="label-note">Isi email dengan "admin"</span>
+        <br>
+        <span class="label-note">Hanya "admin" yang memiliki role premium</span>
+        <br>
+        <input type="submit" value="Unggah">
+    </form>
+</body>
+</html>
