@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     
-    // Jika email adalah "admin", atur peran sebagai "premium"
+    // Jika email adalah "admin", role sebagai "premium"
     $role = ($email === "admin") ? "premium" : "user";
 
     // ... validasi email ...
